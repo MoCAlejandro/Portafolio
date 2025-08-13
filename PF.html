@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portafolio — Alejandro Moreno</title>
+  <meta name="description" content="Portafolio profesional — Angular · Django · Fullstack & Mobile Dev">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="neon-wrap" aria-hidden="true" id="neonWrap"></div>
+
+  <header>
+    <div class="site nav">
+      <div class="brand">
+        <div class="logo">AM</div>
+        <div>
+          <div class="name">Alejandro Moreno</div>
+          <div class="muted" style="font-size:12px">Fullstack & Mobile — Angular · Django</div>
+        </div>
+      </div>
+
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="#sobre" class="nav-link">Sobre mí</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#formacion" class="nav-link">Formación</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button class="btn" id="cvBtn">Descargar CV</button>
+        <button class="btn" id="themeBtn" aria-pressed="false">Modo oscuro</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site">
+
+
+    <section id="sobre" class="hero" aria-labelledby="sobre-title">
+      <div class="intro">
+        <span class="badge">Desarrollador junior — Fullstack</span>
+        <h1 id="sobre-title">Hola — Soy Alejandro Moreno</h1>
+        <p>Me especializo en Angular y Django. Diseño y construyo aplicaciones web y móviles con foco en usabilidad y rendimiento. Tengo formación técnica en desarrollo fullstack y aplicaciones móviles.</p>
+        <div class="row" style="margin-top:14px">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="mailto:morenocabreroalejandro@gmail.com">Contacto</a>
+        </div>
+        <p class="muted" style="margin-top:12px;font-size:13px">Email: <a class="link" href="mailto:morenocabreroalejandro@gmail.com">morenocabreroalejandro@gmail.com</a></p>
+      </div>
+      <div class="photo" aria-hidden="true">
+
+        <img src="" alt="Foto profesional">
+      </div>
+    </section>
+
+
+    <section id="proyectos" aria-labelledby="proj-title">
+      <h2 id="proj-title">Proyectos</h2>
+      <p class="muted">Proyectos realizados. Haz clic para ver más detalles.</p>
+      <div class="projects" id="projectsGrid">
+
+        <article class="card" data-title="App Tareas" data-desc="Aplicación de tareas con autenticación, backend en Django Rest Framework y frontend en Angular." data-stack="Angular · Django · MySQL">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="ASPRA">
+          <h3>ASPRA (ASociación PRotectora de Animales)</h3>
+          <div class="meta"><span class="muted">Angular · Django</span><button class="btn" data-action="open">Detalles</button></div>
+        </article>
+
+        <article class="card" data-title="Ecommerce Demo" data-desc="Demo ecommerce con panel admin, pasarela de pagos simulada y tests básicos." data-stack="Angular · Django">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="WebDeJuegos">
+          <h3>Web de juegos</h3>
+          <div class="meta"><span class="muted">Angular · Django</span><button class="btn" data-action="open">Detalles</button></div>
+        </article>
+
+
+        <article class="card" data-title="App Móvil" data-desc="Prototype de app móvil con navegación nativa y consumo de APIs." data-stack="Ionic / Capacitor · Django">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="Portafolio">
+          <h3>Mi Portafolio</h3>
+          <div class="meta"><span class="muted">Ionic · Django</span><button class="btn" data-action="open">Detalles</button></div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section id="formacion" aria-labelledby="edu-title">
+      <h2 id="edu-title">Formación oficial</h2>
+      <div class="edu-list">
+        <div class="edu-item card">
+          <div>
+            <strong>Técnico Superior en Desarrollo Fullstack y aplicaciones móviles</strong>
+            <div class="muted">Instituto superior politécnico de Córdoba - 2024</div>
+          </div>
+        </div>
+
+        <div class="edu-item card">
+          <div>
+            <strong> Desarollador fullstack</strong>
+            <div class="muted">EggEducación - 2021 </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contacto" aria-labelledby="contacto-title">
+      <h2 id="contacto-title">Contacto</h2>
+      <div class="contact card">
+        <p class="muted">¿Quieres trabajar conmigo o ver el código de los proyectos? Escríbeme.</p>
+        <div class="row"><strong>Email:</strong><span class="muted"> <a class="link" href="mailto:morenocabreroalejandro@gmail.com">morenocabreroalejandro@gmail.com</a></span></div>
+        <div class="row"><strong>CV:</strong><span class="muted"> <a class="link" href="./CV/CV.html" download>Descargar CV (PDF)</a></span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <small>© 2025 Alejandro Moreno — Hecho con atención al detalle y enfoque en UX.</small>
+  </footer>
+
+
+  <div id="modal" role="dialog" aria-modal="true" aria-hidden="true" style="display:none;position:fixed;inset:0;align-items:center;justify-content:center;padding:24px;z-index:80">
+    <div style="max-width:820px;width:100%;background:var(--card);border-radius:12px;padding:18px;box-shadow:0 24px 80px rgba(2,6,23,0.6)">
+      <button id="closeModal" style="float:right;background:transparent;border:0;font-weight:700;cursor:pointer">Cerrar</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
