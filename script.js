@@ -45,7 +45,7 @@
       const title = card.dataset.title;
       const desc = card.dataset.desc;
       const stack = card.dataset.stack;
-      modalContent.innerHTML = `<h3 style="margin-top:0">${title}</h3><p>${desc}</p><p class='muted'>Stack: ${stack}</p><p style='margin-top:12px'><a href='#' class='link'>Código / Demo</a></p>`;
+      modalContent.innerHTML = `<h3 style="margin-top:0">${title}</h3><p>${desc}</p><p class='muted'>Stack: ${stack}</p><p style='margin-top:12px'><a href='https://github.com/MoCAlejandro/${title}' class='link'>Código / Demo</a></p>`;
       modal.style.display='flex'; modal.setAttribute('aria-hidden','false');
     });
   });
