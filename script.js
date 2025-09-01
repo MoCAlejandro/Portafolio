@@ -65,6 +65,57 @@
     });
   }
 
+  const langBtn = document.getElementById('langBtn');
+
+// Diccionario de traducciones
+const translations = {
+  es: {
+    aboutTitle: "Sobre mí",
+    aboutText: "Me especializo en Angular y Django. Diseño y construyo aplicaciones web y móviles con foco en usabilidad y rendimiento. Tengo formación técnica en desarrollo fullstack y aplicaciones móviles.",
+    projectsTitle: "Proyectos",
+    educationTitle: "Formación Reglada",
+    contactTitle: "Contacto",
+    contactText: "¿Quieres trabajar conmigo o ver el código de los proyectos? Escríbeme.",
+    cvText: "Descargar CV (PDF)",
+    themeDark: "Modo oscuro",
+    themeLight: "Modo claro"
+  },
+  en: {
+    aboutTitle: "About Me",
+    aboutText: "I specialize in Angular and Django. I design and build web and mobile applications focused on usability and performance. I have technical training in fullstack and mobile app development.",
+    projectsTitle: "Projects",
+    educationTitle: "Education",
+    contactTitle: "Contact",
+    contactText: "Want to work with me or see the project code? Get in touch.",
+    cvText: "Download CV (PDF)",
+    themeDark: "Dark mode",
+    themeLight: "Light mode"
+  }
+};
+
+let currentLang = localStorage.getItem("am_lang") || "es";
+
+function applyLanguage(lang) {
+  const t = translations[lang];
+  document.querySelector("#sobre-title").textContent = t.aboutTitle;
+  document.querySelector("#sobre p").textContent = t.aboutText;
+  document.querySelector("#proj-title").textContent = t.projectsTitle;
+  document.querySelector("#edu-title").textContent = t.educationTitle;
+  document.querySelector("#contacto-title").textContent = t.contactTitle;
+  document.querySelector("#contacto .contact p").textContent = t.contactText;
+  document.querySelector("#cvBtn").textContent = t.cvText;
+  themeBtn.textContent = root.classList.contains("dark") ? t.themeLight : t.themeDark;
+  langBtn.textContent = lang === "es" ? "EN" : "ES";
+  localStorage.setItem("am_lang", lang);
+}
+
+applyLanguage(currentLang);
+
+langBtn.addEventListener("click", () => {
+  currentLang = currentLang === "es" ? "en" : "es";
+  applyLanguage(currentLang);
+});
+
   function runNeonSequence(){
     createNeonDots();
     const dots = Array.from(document.querySelectorAll('.neon-dot'));
